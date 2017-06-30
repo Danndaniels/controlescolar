@@ -1,0 +1,68 @@
+create database SistemaEscolar;
+use Sistemaescolar;
+
+Create table Grupo(Id_Grupo int IDENTITY(1,1) primary key, Nombre varchar(25));
+
+Create table Bimestre(Id_Bimestre int IDENTITY(1,1) primary key, Nombre varchar(25));
+
+Create table CicloEscolar(Id_Ciclo int IDENTITY(1,1) primary key, Nombre varchar(25));
+
+
+Create table Asignatura(Id_Asignatura int IDENTITY(1,1) primary key, Nombre varchar(25), grado varchar(1));
+
+Create table PersonalAdministrativo(Id_Personal int IDENTITY(1,1) primary key,
+Usuario Varchar(45),
+Contrasena Varchar(45),
+Nombre varchar(25),
+ApellidoPaterno varchar(45),
+ApellidoMaterno varchar(45),
+Direccion Varchar(150),
+Telefono Varchar(10),
+CorreoElectronico Varchar(50),
+Cedula_Profesional Varchar(45),
+Puesto Varchar(15),
+NumeroSeguro Varchar(40),
+Curp Varchar(40),
+Rfc varchar(30));
+
+Create table Alumno(Matricula int primary key, 
+Contrasena varchar(25),
+Nombre varchar(25),
+ApellidoPaterno varchar(45),
+ApellidoMaterno varchar(45),
+Sexo Varchar(12),
+Direccion Varchar(150),
+Telefono Varchar(10),
+CorreoElectronico Varchar(50),
+CURP Varchar(30),
+rfc Varchar(30),
+Tutor Varchar(60),
+TipoSangre Varchar(10),
+NUmeroSeguro Varchar(60),
+id_grupo int,
+FechaNacimiento date,
+Turno Varchar(15),
+FOREIGN KEY (id_grupo) REFERENCES grupo(id_grupo));
+
+Create table AsignaturaImpartida(id int IDENTITY(1,1) primary key,
+id_grupo int,
+id_asignatura int,
+id_profesor int,
+Turno varchar(20),
+FOREIGN KEY (id_grupo) REFERENCES grupo(id_grupo),
+FOREIGN KEY (id_asignatura) REFERENCES Asignatura(id_asignatura),
+FOREIGN KEY (id_profesor) REFERENCES personalAdministrativo(id_personal))
+
+Create table Calificacion(id_Calificacion int IDENTITY(1,1) primary key,
+matricula int,
+id_bimestre int,
+id_ciclo int,
+calificacion int,
+id_asignatura int,
+id_grupo int,
+FOREIGN KEY (matricula) REFERENCES Alumno(matricula),
+FOREIGN KEY (id_bimestre) REFERENCES Bimestre(id_bimestre),
+FOREIGN KEY (id_ciclo) REFERENCES CicloEScolar(id_ciclo),
+FOREIGN KEY (id_grupo) REFERENCES grupo(id_grupo),
+FOREIGN KEY (id_asignatura) REFERENCES Asignatura(id_asignatura))Engine=Innodb;
+
