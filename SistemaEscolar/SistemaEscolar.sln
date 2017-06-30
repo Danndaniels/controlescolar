@@ -8,7 +8,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SistemaEscolar", "http://lo
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_29815"
-		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\PROYECTO\SistemaEscolar\"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Source\Repos\controlescolar\SistemaEscolar\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_29815\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
@@ -21,7 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SistemaEscolar", "http://lo
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\Desktop\PROYECTO\SistemaEscolar\"
+		SlnRelativePath = "..\..\..\..\Source\Repos\controlescolar\SistemaEscolar\"
 	EndProjectSection
 EndProject
 Global
