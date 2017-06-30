@@ -21,7 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "SistemaEscolar", "http://lo
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\..\..\..\Desktop\PROYECTO\SistemaEscolar\"
+		SlnRelativePath = "..\..\..\..\Source\Repos\controlescolar\SistemaEscolar\"
 	EndProjectSection
 EndProject
 Global
